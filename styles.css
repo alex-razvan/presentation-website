@@ -19,7 +19,7 @@ h1{
 }
 p, a, li{
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     font-weight: 400;
     color: #3c3c3c;
@@ -43,8 +43,9 @@ a{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 50%;
-    height: 100vh;
+    width: 55%;
+    min-height: 100vh;
+    height: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
     align-content: center;
@@ -52,18 +53,14 @@ a{
 }
 
 section{
-    width: 50%;
-    padding: 0 15px;
+    padding: 0 10px;
+}
+section:nth-child(1){
+    width: 40%;
 }
 
-section div ul{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-section div ul li{
-    list-style: none;
-    padding: 0 20px 0 0;
+section:nth-child(2){
+    width: 55%;
 }
 
 img, video {
@@ -75,12 +72,74 @@ section div img{
     width: 100%;
     border-radius: 10px;
 }
-@media only screen and (max-width: 1200px) {
-#content {
-    width: 65%;
+
+#experience-education{
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    height: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    animation: 0.5s alternate fadeInUp;
 }
+#experience-education ul li{
+    display: inline-flex;
+    width: 100%;
+    border: 2px solid #3c3c3c;
+    margin: 5px 0;
+    text-align: center;
+    border-width: 1px 0 0 0;
+    padding: 11px 0;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+#experience-education ul li:hover{
+    padding: 15px;
 }
 
+h2{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    text-align: center;
+    padding: 8px;
+    margin: 0 auto;
+}
+
+#work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55%;
+    height: 100%;
+    min-height: 55vh;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    animation: 0.5s alternate fadeInUp;
+}
+#work ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#work ul li{
+    list-style: none;
+    padding: 0 20px 0 0;
+}
+
+@media only screen and (max-width: 1200px) {
+#content {
+    width: 75%;
+}
+#experience-education{
+    width: 75%;
+}
+#work{
+    width: 75%;
+}
+}
 
 @media only screen and (max-width: 980px) {
 #content{
@@ -88,17 +147,21 @@ section div img{
     flex-direction: row;
     align-content: flex-start;
     width: 100%;
+    height: 100%;
     margin: 0;
 }
 #img-cover{
     width: 100%;
     height: 65vh;
-    background: linear-gradient(#ffffff00 38%, #fffcf2c0);
+    background: linear-gradient(#ffffff00 38%, #fffcf2b8);
     position: absolute;
 }
 section{
     width: 100%;
     padding: 0;
+}
+section:nth-child(1){
+    width: 100%;
 }
 section:nth-child(2) {
     width: 90%;
@@ -128,5 +191,23 @@ h1{
     box-shadow: 2px 3px 7px #76767675;
 }
 
+
+#experience-education{
+    width: 90%;
+}
+#experience-education ul li{
+    display: inline-flex;
+    width: 100%;
+    border: 2px solid #3c3c3c;
+    margin: 5px 0;
+    text-align: left;
+    border-width: 1px 0 0 0;
+    padding: 11px 0;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+#work{
+    width: 90%;
+}
 
 }
