@@ -41,10 +41,10 @@ a{
 
 #content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     width: 55%;
-    min-height: 70vh;
+    min-height: 80vh;
     height: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
