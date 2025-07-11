@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -9,6 +10,33 @@ body{
     background-color: #fffcf2;
 
 }
+
+nav{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    gap: 4vh;
+    margin: 20px auto;
+    padding: 20px 0;
+    background: #3c3c3c;
+    border-radius: 8px;
+}
+nav ul li{
+    list-style-type: none;
+}
+nav ul li a{
+    color: #fffcf2;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: #dcdcdc;
+}
+
 
 h1{
     font-family: "Noto Sans KR", sans-serif;
@@ -19,7 +47,7 @@ h1{
 }
 p, a, li{
     font-family: "Noto Sans KR", sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     font-weight: 400;
     color: #3c3c3c;
@@ -41,19 +69,18 @@ a{
 
 #content{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     width: 55%;
-    min-height: 80vh;
+    min-height: 85vh;
     height: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
     align-content: center;
     animation: 0.5s alternate fadeInUp;
 }
-
 section:nth-child(1){
-    width: 40%;
+    width: 35%;
 }
 
 section:nth-child(2){
@@ -69,11 +96,17 @@ section div img{
     width: 100%;
     border-radius: 10px;
 }
+section div p{
+    font-size: 0.9rem;
+}
+section div p a{
+    font-size: 0.9rem;
+}
 
 #experience-education{
     display: flex;
     justify-content: center;
-    width: 55%;
+    width: 90%;
     height: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -109,7 +142,7 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 55%;
+    width: 90%;
     height: 100%;
     min-height: 55vh;
     margin: 0 auto;
@@ -131,14 +164,17 @@ h2{
     width: 75%;
 }
 #experience-education{
-    width: 75%;
+    width: 90%;
 }
 #work{
-    width: 75%;
+    width: 90%;
 }
 }
 
 @media only screen and (max-width: 980px) {
+p, a, li{
+    font-size: 0.9rem;
+}
 #content{
     display: flex;
     flex-direction: row;
@@ -193,7 +229,9 @@ h1{
     width: 90%;
 }
 #experience-education ul li{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+        flex-direction: column;x
     width: 100%;
     border: 2px solid #3c3c3c;
     margin: 5px 0;
