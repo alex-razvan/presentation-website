@@ -79,11 +79,11 @@ a{
     align-content: center;
     animation: 0.5s alternate fadeInUp;
 }
-section:nth-child(1){
+#content section:nth-child(1){
     width: 35%;
 }
 
-section:nth-child(2){
+#content section:nth-child(2){
     width: 55%;
 }
 
@@ -92,14 +92,14 @@ img, video {
     height: auto;
 }
 
-section div img{
+#content section div img{
     width: 100%;
     border-radius: 10px;
 }
-section div p{
+#content section div p{
     font-size: 0.9rem;
 }
-section div p a{
+#content section div p a{
     font-size: 0.9rem;
 }
 
@@ -140,12 +140,12 @@ h2{
 
 #work{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 90%;
-    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 55%;
     min-height: 55vh;
-    margin: 0 auto;
+    height: 100%;
+    margin: 8vh auto 4vh auto;
     flex-wrap: wrap;
     animation: 0.5s alternate fadeInUp;
 }
@@ -154,9 +154,21 @@ h2{
     flex-wrap: wrap;
 }
 
-#work ul li{
+#work ul li, a{
     list-style: none;
     padding: 0 20px 0 0;
+    font-size: 0.9rem;
+}
+#work p{
+    font-size: 0.9rem;
+}
+#work section:nth-child(1){
+    width: 45%;
+    padding: 2vh;
+}
+#work section:nth-child(2){
+    width: 55%;
+    padding: 2vh;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -167,7 +179,7 @@ h2{
     width: 90%;
 }
 #work{
-    width: 90%;
+    width: 75%;
 }
 }
 
@@ -189,19 +201,19 @@ p, a, li{
     background: linear-gradient(#ffffff00 38%, #ffffffbd);
     position: absolute;
 }
-section{
+#content section{
     width: 100%;
     padding: 0;
 }
-section:nth-child(1){
+#content section:nth-child(1){
     width: 100%;
 }
-section:nth-child(2) {
+#content section:nth-child(2) {
     width: 90%;
     margin: -4vh auto 4vh auto;
     padding-bottom: 5vh;
 }
-section div img{
+#content section div img{
     width: 100%;
     height: 65vh;
     object-fit: cover;
@@ -228,10 +240,13 @@ h1{
 #experience-education{
     width: 90%;
 }
+#experience-education ul{
+    width: 100%;
+}
 #experience-education ul li{
     display: flex;
     flex-wrap: wrap;
-        flex-direction: column;x
+    flex-direction: column;
     width: 100%;
     border: 2px solid #3c3c3c;
     margin: 5px 0;
@@ -242,7 +257,14 @@ h1{
     transition: 0.3s;
 }
 #work{
+    display: flex;
+    flex-direction: column;
     width: 90%;
 }
-
+#work section:nth-child(1){
+    width: 100%;
+}
+#work section:nth-child(2){
+    width: 100%;
+}
 }
